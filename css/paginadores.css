@@ -1,0 +1,33 @@
+#btnControlPaginador {
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-bottom: 10px;
+
+  background-color: #f2f2f2;
+  color: black;
+  border: 0px solid #512da8;
+  border-radius: 5px;
+}
+
+#btnControlPaginador:hover {
+  background-color: #42248a;
+  color: white;
+  cursor: pointer;
+}
+
+#pgActual {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  font-size: 17px;
+  font-weight: bolder;
+  color: royalblue;
+  line-height: 1.8;
+}
+#pagination_controls {
+  display: flex;
+  justify-content: flex-end;
+}

@@ -1,0 +1,364 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  color: #fff;
+  background: #263238;
+  font-family: "Khula", sans-serif;
+}
+
+section {
+  margin-top: 7%;
+}
+
+span {
+  color: #9b9a9f;
+}
+
+form {
+  min-width: 310px;
+  background: #3b3b3f;
+  border-radius: 10px;
+  align-self: flex-start;
+}
+form p {
+  font-family: "Viga", sans-serif;
+}
+form p,
+form i {
+  font-size: 1.5rem;
+}
+form .form-group {
+  padding: 20px 20px 0px 20px;
+  position: relative;
+}
+form input[type="text"] {
+  background: none;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #f3f1f1;
+  width: 100%;
+  height: 32px;
+  padding-left: 14px;
+  padding-right: 35px;
+  color: #fff;
+  font-size: 1.05rem;
+}
+form .form-group input[type="text"]:focus ~ label,
+form .form-group input[type="text"]:valid ~ label {
+  font-size: 0.9rem;
+  top: 5px;
+  left: 20px;
+}
+form .form-group label {
+  position: absolute;
+  top: 28px;
+  left: 28px;
+  color: #9b9a9f;
+  pointer-events: none;
+  transition: all 300ms;
+}
+form .form-group #txtCount {
+  background: #6f6f77;
+  font-size: 0.8rem;
+  position: absolute;
+  padding: 2px 9px;
+  border-radius: 5px;
+  right: 20px;
+  top: 25px;
+  line-height: 1.5;
+  font-weight: bold;
+}
+.btn {
+  height: 56px;
+}
+form input[type="checkbox"] {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  border-radius: 25px;
+  outline: none;
+  cursor: pointer;
+  appearance: none;
+  font-weight: bold;
+  box-shadow: 1px 6px 11px #1f1f21;
+}
+.btn::before,
+.btn::after {
+  z-index: 2;
+  position: absolute;
+  top: 65%;
+  transform: translateY(-65%);
+  color: #fff;
+  font-weight: bold;
+}
+.btn::before {
+  content: "Evento";
+  left: 70px;
+  pointer-events: none;
+}
+.btn::after {
+  content: "Alarma";
+  right: 70px;
+  pointer-events: none;
+}
+.btn label {
+  z-index: 1;
+  position: absolute;
+  top: 26px;
+  bottom: 10px;
+  border-radius: 20px;
+  height: 40px;
+  width: 40%;
+}
+.btn.btn-1 input {
+  transition: 0.2s -0.1s;
+}
+.btn.btn-1 input:checked {
+  background-color: #00000050;
+}
+.btn.btn-1 input:checked::before {
+  color: #111;
+  transition: color 0.5s 0.2s;
+}
+.btn.btn-1 input:checked::after {
+  color: #111;
+  transition: color 0.5s;
+}
+.btn.btn-1 input:checked + label {
+  left: 8%;
+  background-color: #6f6f77;
+  transition: left 0.5s, right 0.4s 0.2s;
+}
+.btn.btn-1 input:not(:checked) {
+  background: #00000050;
+  transition: background 0.5s -0.1s;
+}
+.btn.btn-1 input:not(:checked)::before {
+  color: #111;
+  transition: color 0.5s;
+}
+.btn.btn-1 input:not(:checked)::after {
+  transition: color 0.5s 0.2s;
+}
+.btn.btn-1 input:not(:checked) + label {
+  left: 52%;
+  background: #6f6f77;
+  transition: left 0.4s 0.2s, right 0.5s, background 0.35s;
+}
+form li {
+  position: relative;
+  list-style: none;
+  margin: 0px 4px;
+}
+form li span {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  z-index: 10;
+  pointer-events: none;
+  left: 0px;
+}
+form li span > * {
+  color: #000;
+  opacity: 0;
+  transition: opacity 300ms;
+}
+form span.border {
+  padding: 18px;
+  filter: blur(1.2px);
+  top: -5px;
+  left: -5px;
+}
+span#red {
+  background: red;
+}
+span#orange {
+  background: orange;
+}
+span#yellow {
+  background: yellow;
+}
+span#green {
+  background: green;
+}
+span#blue {
+  background: blue;
+}
+span#purple {
+  background: purple;
+}
+form input[type="radio"] {
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+  appearance: none;
+}
+form select {
+  background: #6f6f77;
+  color: #fff;
+  height: 35px;
+  padding: 10px 50px 10px 10px;
+  text-align: start;
+  outline: none;
+  box-shadow: 0px 2px 3px #111;
+  border-radius: 5px;
+  border-color: 5px solid #f3f1f1;
+  cursor: pointer;
+}
+form select.time {
+  padding: 10px;
+}
+form .advanced {
+  color: #9b9a9f;
+  font-size: 0.9rem;
+}
+form .calendar {
+  position: relative;
+  padding: 20px;
+}
+form .calendar input[type="text"] {
+  border: none;
+  background-color: #1f1f21;
+  height: 40px;
+  width: 100%;
+  border-radius: 5px;
+  color: #9b9a9f;
+  padding-left: 16px;
+  outline: none;
+  font-size: "Viga", sans-serif;
+  cursor: pointer;
+}
+form .calendar label.icon {
+  position: absolute;
+  z-index: 5;
+  right: 25px;
+  top: 53px;
+  pointer-events: none;
+}
+#calendarContainer {
+  position: absolute;
+  top: 87px;
+  left: 0px;
+  transition: all 400ms;
+  display: none;
+  z-index: 100;
+}
+#calendarContainer.show {
+  display: block;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.p-30 {
+  padding: 0px 30px;
+}
+
+.cjslib-month,
+.cjslib-year {
+  width: 100%;
+  padding: 10px 5px;
+}
+
+.cjslib-days {
+  flex: 0.1;
+}
+
+.cjslib-calendar.cjslib-size-small {
+  width: 310px;
+  height: auto;
+}
+
+#calendarContainer-month {
+  font-size: 1rem;
+}
+
+.form-group.submit {
+  width: 100%;
+  margin-top: 20px;
+  padding: 20px;
+  background: #1f1f21;
+  border-radius: 0px 0px 10px 10px;
+}
+
+.button {
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #f3f1f1;
+  border: none;
+}
+
+.btn-primary {
+  background: #512da8;
+  padding: 10px 25px;
+}
+.btn-primary:hover {
+  background: #42248a;
+}
+.btn-primary:focus {
+  box-shadow: 0px 0px 5px #42248a;
+}
+
+.btn-secondary {
+  background: #4e4e53;
+}
+.btn-secondary:hover {
+  background: #3a3a3d;
+}
+.btn-secondary:focus {
+  box-shadow: 0px 0px 5px #3a3a3d;
+}
+
+#TaskList {
+  width: 70%;
+  align-self: flex-start;
+}
+.taskList {
+  border-collapse: collapse;
+}
+#taskList table {
+  text-align: left;
+}
+.taskList th {
+  background: #42248a;
+  color: #fff;
+  padding: 5px;
+  border: 2px solid #512da8;
+}
+.taskList td {
+  padding: 5px;
+}
+.taskList tr:nth-child(even) {
+  border: 2px solid rgba(0, 0, 0, 0.314);
+  background: rgba(0, 0, 0, 0.314);
+}
+.taskList tr:nth-child(odd) {
+  border: 2px solid #3b3b3f;
+  background: #3b3b3f;
+}
+.taskList tr {
+  transition: all 300ms;
+}
+.taskList tr:hover {
+  border: 2px solid #512da8;
+  background: #512da8;
+}
+.taskList img{
+  display: flex;
+  filter: invert(1);
+  align-self: center;
+}
+/*# sourceMappingURL=main.css.map */
